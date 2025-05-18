@@ -23,8 +23,8 @@ export default function WeatherComponent() {
 
   useEffect(() => {
     setSize({
-      width: window.innerWidth / 2,
-      height: window.innerWidth / 2 / 5 * 4,
+      width: window.innerWidth / 2.5,
+      height: window.innerWidth / 2.5 / 5 * 4,
     });
     if (rive) {
       rive.setTextRunValue(temperatureText, "22°");

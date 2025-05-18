@@ -5,4 +5,5 @@ type WeatherData = {
   high: number;
   low: number;
   condition: string;
+  index: number;
 };

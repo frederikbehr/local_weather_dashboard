@@ -15,18 +15,18 @@ export default function WeekdaySelector({ onSelect }: { onSelect: (date: Date) =
   };
 
   return (
-    <div className="flex gap-2">
+    <div className="flex flex-wrap gap-2 justify-center">
       {days.map((date) => {
         const isSelected = selectedDate?.toDateString() === date.toDateString();
         return (
           <button
             key={date.toDateString()}
             onClick={() => handleSelect(date)}
-            className={`flex flex-col items-center px-4 py-2 rounded cursor-pointer
+            className={`flex flex-col items-center px-3 py-1.5 rounded cursor-pointer
               ${isSelected ? 'bg-blue-500 text-white' : 'bg-gray-200 hover:bg-gray-300'}`}
           >
-            <span className="font-semibold">{date.toLocaleDateString('da-DK', { weekday: 'short' })}</span>
-            <span>{date.getDate()}</span>
+            <span className="font-semibold text-sm">{date.toLocaleDateString('da-DK', { weekday: 'short' })}</span>
+            <span className="text-sm">{date.getDate()}</span>
           </button>
         );
       })}

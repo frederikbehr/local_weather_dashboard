@@ -14,10 +14,12 @@
     "react-dom": "$react-dom"
   },
   "dependencies": {
+    "@rive-app/canvas": "^2.27.3",
     "@rive-app/react-canvas": "^4.20.1",
     "next": "15.3.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "rive-react": "^4.20.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -4,7 +4,7 @@ import React, { useEffect, useState} from 'react';
 import { useRive } from 'rive-react';
 
 
-export default function WeatherComponent() {
+export default function WeatherComponent({ weatherData }: { weatherData: WeatherData | null}) {
   // Component size state
   const [size, setSize] = useState({ width: 400, height: 400 });
 
@@ -26,12 +26,12 @@ export default function WeatherComponent() {
       width: window.innerWidth / 2.5,
       height: window.innerWidth / 2.5 / 5 * 4,
     });
-    if (rive) {
-      rive.setTextRunValue(temperatureText, "22°");
-      rive.setTextRunValue(highLowText, "h:24° l:9°");
-      rive.setTextRunValue(conditionText, "Solrigt");
+    if (rive && weatherData !== null) {
+      rive.setTextRunValue(temperatureText, `${weatherData.temperature}°`);
+      rive.setTextRunValue(highLowText, `h:${weatherData.high}° l:${weatherData.low}°`);
+      rive.setTextRunValue(conditionText, `${weatherData.condition}`);
     }
-  }, [rive]);
+  }, [rive, weatherData]);
 
   return (
     <RiveComponent style={size}/>

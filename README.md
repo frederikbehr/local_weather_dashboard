@@ -29,6 +29,8 @@ At first, I had an idea for using a rive file with a phone and its weather widge
 
 #### First idea and result
 This idea looks nice, but having the rive animation attached to the bottom of the screen using absolute (aesthetic purposes) was not ideal.
-
+![First iteration](https://github.com/frederikbehr/local_weather_dashboard/blob/main/images/iter_1.png?raw=true)
 #### Final result
 This result was more responsive, as the rive file and overall idea allowed for more free styling.
+![Final iteration, desktop](https://github.com/frederikbehr/local_weather_dashboard/blob/main/images/iter_2_1.png?raw=true)
+![Final iteration, mobile](https://github.com/frederikbehr/local_weather_dashboard/blob/main/images/iter_2_2.png?raw=true)
